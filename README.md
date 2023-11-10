@@ -1,10 +1,10 @@
-# Astro Workshop
+# 🪐 Astro Workshop
 
-## Previous considerations
+## 🔍 Previous considerations
 
 Be sure to have installed Node `v18.14.1` or a newer version.
 
-## The website
+## 💻 The website
 
 NBA teams is a small web app that shows the teams in the best basketball league
 in the world. You can navigate through the teams pages and add likes to the
