@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { getTeamById, getTeams } from '../../services/teams'
+const {id} = Astro.params;
+
+// export function getStaticPaths() {
+//   return [
+//     {params: {dog: 'clifford'}},
+//     {params: {dog: 'rover'}},
+//     {params: {dog: 'spot'}},
+//   ];
+// }
+// export function getStaticPaths() {
+//   return [
+//     {params: {id: '1'}},
+//   ];
+// }
+
+export async function getStaticPaths() {
+  
+  const teams = await getTeams();
+
+  return teams.map((team) => ({
+    params: { id: team.id.toString() },
+  }))
+}
+
+const team = await getTeamById(Number(id))
+---
+
+<Layout title={team.full_name}>
+  <article class="flex flex-col items-center">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{team.abbreviation}</h5>
+    <p class="font-normal text-gray-700 dark:text-gray-400 mb-4">{team.full_name}</p>
+    <div class="flex gap-x-2 mb-2 justify-center dark:text-gray-400">
+      <!-- <span class:list={['border border-gray-200 text-xs px-2 py-1 rounded-full', conferenceColor]}>{conference}</span> -->
+      <span class="border border-gray-200 text-xs px-2 py-1 rounded-full">{team.conference}</span>
+      <span class="border border-gray-200 text-xs px-2 py-1 rounded-full">{team.division}</span>
+    </div>
+    <div class="flex items-center justify-center text-sm dark:text-gray-400">
+      <svg class="scale-75 origin-center" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+     </svg>
+     <span>{team.city}</span>
+  </article>
+  
+</Layout>

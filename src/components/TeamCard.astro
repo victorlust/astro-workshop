@@ -1,0 +1,34 @@
+---
+import {type Conference} from '../types/api'
+
+  interface Props {
+    id: number;
+    abbreviation: string;
+    city: string;
+    conference: Conference;
+    division: string;
+    fullName: string;
+    name: string;
+  }
+
+  const {id, abbreviation, city, conference, division, fullName, name} = Astro.props
+  // const conferenceColor = conference === 'East' ? 'text-green-300' : 'text-orange-300'
+---
+
+<a href={`/teams/${id}`} class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-center">
+  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{abbreviation}</h5>
+  <p class="font-normal text-gray-700 dark:text-gray-400 mb-4">{fullName}</p>
+  <div class="flex gap-x-2 mb-2 justify-center dark:text-gray-400">
+    <!-- <span class:list={['border border-gray-200 text-xs px-2 py-1 rounded-full', conferenceColor]}>{conference}</span> -->
+    <span class="border border-gray-200 text-xs px-2 py-1 rounded-full">{conference}</span>
+    <span class="border border-gray-200 text-xs px-2 py-1 rounded-full">{division}</span>
+  </div>
+  <div class="flex items-center justify-center text-sm dark:text-gray-400">
+    <svg class="scale-75 origin-center" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+      <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+   </svg>
+   <span>{city}</span>
+  </div>
+</a>
