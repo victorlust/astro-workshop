@@ -1,40 +1,21 @@
-# Astro Starter Kit: Basics
+# Astro Workshop
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Previous considerations
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Be sure to have installed Node `v18.14.1` or a newer version.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## The website
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+NBA teams is a small web app that shows the teams in the best basketball league
+in the world. You can navigate through the teams pages and add likes to the
+button in the footer 😸.
 
-## 🚀 Project Structure
+![app-print](./public/web-pic2.png)
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🧑‍🚀 Play with the code. Have fun!
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Feel free to modify the code, add new functionalities and learn more about this
+amazing framework.
 
 ## 🧞 Commands
 
@@ -51,4 +32,18 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Here is the list of interesting links we talked about in the workshop:
+
+- [Astro documentation](https://docs.astro.build/en/getting-started/)
+- [Astro showcase](https://astro.build/showcase/) (for inspiration)
+- [Astro resources](https://astro.new/latest) (like templates)
+- [Astro integrations](https://astro.build/integrations/)
+- [API documentation](https://www.balldontlie.io/home.html#introduction)
+- [Type generator from JSON](https://app.quicktype.io/)
+- [Flowbite](https://flowbite.com/) (UI framework used in the project)
+- [Transitions API official docs](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API)
+  and
+  [Chrome for developers' article about Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+
+> Feel free to contact me in case you have any doubt. Thank you for your
+> attention❤️
